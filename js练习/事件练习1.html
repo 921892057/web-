@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>事件练习1</title>
+    <style>
+        #text {
+            display: block;
+            width: 400px;
+            cursor: pointer;
+            height: 20px;
+            border: solid 1px #CCC;
+        }
+        
+        #menu {
+            display: none;
+            width: 400px;
+            height: 100px;
+            border: solid 1px #CCC;
+        }
+        
+        #text1 {
+            display: block;
+            width: 400px;
+            cursor: pointer;
+            height: 20px;
+            border: solid 1px #CCC;
+        }
+        
+        #menu1 {
+            display: none;
+            width: 400px;
+            height: 100px;
+            border: solid 1px #CCC;
+        }
+    </style>
+</head>
+
+<body>
+    <div>题目：JS点击显示隐藏菜单（用鼠标移动也实现一下）</div>
+    <div>思路：获取元素，判断点击，如果DIV显示就隐藏，如果DIV隐藏就显示出来。</div>
+    <!--用鼠标点击实现-->
+    <span id="text" onclick="fn1()">点击显示菜单，再点击隐藏菜单</span>
+    <div id="menu" style="display:none;">这是文字哦。</div>
+    <!--用鼠标移动实现-->
+    <span id="text1" onmouseout="fn3()" onmouseover="fn2()">鼠标移动上去显示菜单，鼠标离开隐藏菜单</span>
+    <div id="menu1">这是文字哦。</div>
+</body>
+<script type="text/javascript">
+    function fn1() {
+        var menu = document.getElementById("menu");
+        var dis = menu.style.display
+        if (dis == "none") {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
+        };
+    };
+
+    function fn2() {
+        var text1 = document.getElementById("text1");
+        var menu1 = document.getElementById("menu1");
+        menu1.style.display = "block";
+    };
+
+    function fn3() {
+        var text1 = document.getElementById("text1");
+        var menu1 = document.getElementById("menu1");
+        menu1.style.display = "none";
+    };
+</script>
+
+</html>

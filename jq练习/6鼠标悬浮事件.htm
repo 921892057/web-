@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>鼠标悬浮事件</title>
+    <link href="./images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="w_600 mar_center">
+        <p class="pad_t20 pad_b20"><strong>要求：</strong>编写一段JavaScript代码，实现鼠标悬浮时，行背景色变浅蓝(加.on样式)，显示子标题，其他行背景色变白并隐藏子标题！</p>
+
+    </div>
+    <div class="w_600 mar_center">
+        <div class="info_cont">
+            <ul id="test">
+                <li class="">
+                    <div><a href="#" class="hover">鼠标悬浮时，行背景色变黄，显示子标题，其他行背景色变白并隐藏子标题1</a></div>
+                    <div style="display: none" class="hide">我是子标题1</div>
+                </li>
+                <li>
+                    <div><a href="#" class="hover">鼠标悬浮时，行背景色变黄，显示子标题，其他行背景色变白并隐藏子标题2</a></div>
+                    <div style="display: none" class="hide">我是子标题2</div>
+                </li>
+                <li>
+                    <div><a href="#" class="hover">鼠标悬浮时，行背景色变黄，显示子标题，其他行背景色变白并隐藏子标题3</a></div>
+                    <div style="display: none" class="hide">我是子标题3</div>
+                </li>
+                <li>
+                    <div><a href="#" class="hover">鼠标悬浮时，行背景色变黄，显示子标题，其他行背景色变白并隐藏子标题4</a></div>
+                    <div style="display: none" class="hide">我是子标题4</div>
+                </li>
+                <li>
+                    <div><a href="#" class="hover">鼠标悬浮时，行背景色变黄，显示子标题，其他行背景色变白并隐藏子标题5</a></div>
+                    <div style=" display:none;" class="hide">我是子标题5</div>
+                </li>
+                <li>
+                    <div><a href="#" class="hover">鼠标悬浮时，行背景色变黄，显示子标题，其他行背景色变白并隐藏子标题6</a></div>
+                    <div style=" display:none;" class="hide">我是子标题6</div>
+                </li>
+            </ul>
+
+        </div>
+
+        <div>
+
+        </div>
+
+</body>
+<script language="javascript" src="./images/jquery-1.8.3.min.js"></script>
+<script>
+    // $().ready(function() {
+    //     $("li").mouseenter(function() {
+    //         $(this).addClass("on")
+    //         $(this).children("div").eq(1).show();
+    //     });
+    // });
+    // $().ready(function() {
+    //     $("li").mouseleave(function() {
+    //         $(this).removeClass("on")
+    //         $(this).children("div").eq(1).hide();
+    //     });
+    // });
+    $().ready(function() {
+        $("li").hover(function() {
+            $(this).addClass("on")
+            $(this).children("div").eq(1).show();
+        }, function() {
+            $(this).removeClass("on")
+            $(this).children("div").eq(1).hide();
+        })
+    });
+</script>
+
+</html>

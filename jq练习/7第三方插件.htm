@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>树的操作</title>
+    <link href="./images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="w_600 mar_center">
+        <p class=" pad_t20 pad_b20"><strong>要求：</strong>点击带+号的栏目，展示该栏目的子栏目，再点击一次，则收起改栏目的子栏目。（默认子栏目是隐藏的状态）</p>
+
+    </div>
+    <div class="w_600 mar_center">
+        <div id="div2">
+            <br />
+            <div class="folder ">分类讨论区</div>
+            <div id="sub1" style="display:none;">
+                <div class="folderItem">BBS系统</div>
+                <div class="folderItem">共建水木</div>
+                <div class="folderItem">站务公告栏</div>
+                <div class="folderItem">妆点水木</div>
+                <div class="folderItem1">申请版主</div><br />
+            </div>
+            <div class="folder2 ">社会信息</div>
+            <div id="sub2" style="display:none;">
+                <div class="folderItem">BBS系统</div>
+                <div class="folderItem">共建水木</div>
+                <div class="folderItem">站务公告栏</div>
+                <div class="folderItem">妆点水木</div>
+                <div class="folderItem1">申请版主</div><br />
+            </div>
+            <div class="folder3 ">休闲娱乐</div>
+            <div id="sub3" style="display:none;">
+                <div class="folderItem">BBS系统</div>
+                <div class="folderItem">共建水木</div>
+                <div class="folderItem">站务公告栏</div>
+                <div class="folderItem">妆点水木</div>
+                <div class="folderItem1">申请版主</div><br />
+            </div>
+            <div class="folder4 ">电脑技术</div>
+            <div id="sub4" style="display:none;">
+                <div class="folderItem">BBS系统</div>
+                <div class="folderItem">共建水木</div>
+                <div class="folderItem">站务公告栏</div>
+                <div class="folderItem">妆点水木</div>
+                <div class="folderItem1">申请版主</div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/jquery.treeview.js"></script>
+
+    <script>
+        // $(".folder4").click(function() {         
+        //     $("#sub4").toggle();  //toggle提供为隐藏和显示相互转换的方法    意思是点击的这个 元素的下一个元素是显示的话就隐藏，是隐藏的话就显示               
+        // })
+        // $(".folder3").click(function() {         
+        //     $("#sub3").toggle(); 
+        // })
+        // $(".folder2").click(function() {         
+        //     $("#sub2").toggle(); 
+        // })
+        $(".folder").click(function() {         
+            $("#sub1").toggle(); 
+        })
+        $().ready(function() {
+            var i = 1;
+            for (i; i < 5; i++) {
+                var f = ".folder" + i;
+                $(f).click(function() {         
+                    $(this).next().toggle(); 
+                })
+            }
+        });
+    </script>
+</body>
+
+</html>

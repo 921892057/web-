@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>表单校验</title>
+    <link href="./images/style.css" rel="stylesheet" type="text/css">
+    <style>
+        .txt {
+            border: solid #ccc 1px;
+            padding: 3px 5px;
+        }
+        
+        .onInfoShow {
+            line-height: 22px;
+            color: #999;
+        }
+        
+        .onInfoFocus {
+            line-height: 22px;
+            color: #333;
+            background-image: url('images/onFocus.gif');
+            background-repeat: no-repeat;
+            padding-left: 26px;
+        }
+        
+        .onInfoCorrect {
+            line-height: 22px;
+            color: #333;
+            background-image: url('images/onCorrect.gif');
+            background-repeat: no-repeat;
+            padding-left: 26px;
+        }
+        
+        .onInfoError {
+            line-height: 22px;
+            color: #333;
+            background-image: url('images/onError.gif');
+            background-repeat: no-repeat;
+            padding-left: 26px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w_600 mar_center">
+        <p class=" pad_t20 pad_b20"><strong>要求：</strong>定义一个表单：用户名（只能为字母数字和下划线，只能以字母开头）、身份证（身份证的格式）、邮箱（邮箱的格式）、年龄（从 1 到 100），密码和确认密码（允许汉字、字母，两次输入的密码要一致）；然后需要定义一个按钮，点击提交按钮的时候需要校验，校验不通过的输入框给与必要的提示并重新获得焦点。</p>
+
+    </div>
+    <div class="w_600 mar_center">
+        <form id="form" method="get" action="">
+            <table width="600px;">
+                <tr>
+                    <td style="width:80px; text-align:right; ">姓名：</td>
+                    <td style="width:180px;"><input type="text" name="txtName" id="txtName" /></td>
+                    <td style="text-align:left;">
+                        <div id="divName"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:80px; text-align:right; ">身份证：</td>
+                    <td><input type="text" name="txtID" id="txtID" /></td>
+                    <td>
+                        <div id="divID"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:80px; text-align:right; ">邮箱：</td>
+                    <td><input type="text" name="txtEmail" id="txtEmail" /></td>
+                    <td>
+                        <div id="divEmail"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:80px; text-align:right; ">年龄：</td>
+                    <td><input type="text" name="txtAge" id="txtAge" /></td>
+                    <td>
+                        <div id="divAge"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:80px; text-align:right; ">密码：</td>
+                    <td><input type="password" name="txtPwd" id="txtPwd" /></td>
+                    <td>
+                        <div id="divPwd"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:80px; text-align:right; ">确认密码：</td>
+                    <td><input type="password" name="txtConfirmPwd" id="txtConfirmPwd" /></td>
+                    <td>
+                        <div id="divConfirmPwd"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="submit" value="提交" id="tijiao" /> </td>
+                    <td>&nbsp;</td>
+                </tr>
+
+            </table>
+
+        </form>
+    </div>
+
+</body>
+<script language="javascript" src="./images/jquery-1.8.3.min.js"></script>
+<script>
+    $("#tijiao").click(function() {
+        // 用户名验证
+        var name = $("#txtName").val();
+        var rename = /^[a-zA-Z]\w{5,17}$/;
+        if (rename.test(name) == false) {
+            alert("用户名格式错误！")
+        };
+        // 身份证验证
+        var id = $("#txtID").val();
+        var reid = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+        if (reid.test(id) == false) {
+            alert("身份证格式错误")
+        };
+        // 邮箱验证
+        var email = $("#txtEmail").val();
+        var reemail = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+        if (reemail.test(email) == false) {
+            alert("身邮箱格式错误")
+        };
+        // 年龄验证
+        var age = $("#txtAge").val();
+        var reage = /^([1]?\d{1,2})$/;
+        if (reage.test(age) == false) {
+            alert("年龄格式错误")
+        };
+        // 密码验证
+        var pwd = $("#txtPwd").val();
+        var repwd = $("#txtConfirmPwd").val();
+        if (pwd != repwd) {
+            alert("密码格式错误")
+        };
+
+    });
+</script>
+
+</html>

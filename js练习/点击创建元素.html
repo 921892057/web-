@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>插入节点</title>
+</head>
+
+<body>
+    <h1>正常顺序常插入li、倒序插入li</h1>
+    <input type="txt" id="txt" placeholder="shuru" />
+    <button onclick="btn()">正常顺序插入li</button><button onclick="btn1()">倒序插入li</button>
+    <ul id="ul1"></ul>
+</body>
+
+<script type="text/javascript">
+    var txt = document.getElementById("txt")
+    var ul = document.getElementById("ul1");
+    // 正常顺序插入li
+    function btn() {
+        var li1 = document.createElement('li'); //创建li元素
+        li1.innerHTML = txt.value; // 将输入内容传给li
+        ul.appendChild(li1); //将li添加到ul中
+        txt.value = ""; //清空文本框中的内容
+
+    };
+    // 倒序插入li
+    function btn1() {
+        var li1 = document.createElement('li');
+        li1.innerHTML = txt.value;
+        var tempOne = ul.firstChild; //找到第一个li
+        ul.insertBefore(li1, tempOne) //将添加的li插入第一个li之前
+        txt.value = "";
+    };
+</script>
+
+
+
+</html>

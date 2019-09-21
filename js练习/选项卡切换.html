@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>选项卡切换</title>
+    <style>
+        .div {
+            width: 400px;
+            height: 200px;
+            border: 1px #eee solid;
+        }
+        
+        .bgc_red {
+            background: #F6C;
+        }
+        
+        .bgc_green {
+            background: #0F9;
+        }
+        
+        .bgc_yellow {
+            background: #FF9;
+        }
+        
+        .bgc_blue {
+            background: #0CF;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+        <input id="button" type="button" value="1" />
+        <input id="button" type="button" value="2" />
+        <input id="button" type="button" value="3" />
+        <input id="button" type="button" value="4" />
+
+        <div id="a" class="div bgc_red" style="display:block;">1</div>
+        <div id="a" class="div bgc_green" style=" display:none;">2</div>
+        <div id="a" class="div bgc_yellow" style=" display:none;">3</div>
+        <div id="a" class="div bgc_blue" style=" display:none;">4</div>
+    </div>
+</body>
+<script type="text/javascript">
+    // 将按钮和盒子拿出来
+    window.onload = function() {
+        var box = document.getElementById('box');
+        var input = box.getElementsByTagName('input');
+        var div = box.getElementsByTagName('div');
+
+        for (var i = 0; i < input.length; i++) { //循环历遍onclick事件
+            input[i].index = i; //input[0].index=0 index是自定义属性
+            input[i].onclick = function() {
+                for (var i = 0; i < input.length; i++) { //循环历遍去掉button样式和把div隐藏
+                    input[i].className = '';
+                    div[i].style.display = 'none';
+                };
+
+                div[this.index].style.display = 'block'; //div显示 this.index是当前div 即div[0]之类的
+            };
+        };
+    };
+</script>
+
+</html>

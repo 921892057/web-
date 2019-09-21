@@ -1,0 +1,581 @@
+/*辅助样式 add by lqy*/
+
+.mar_t10 {
+    margin-top: 10px;
+}
+
+.mar_t15 {
+    margin-top: 15px;
+}
+
+.mar_t20 {
+    margin-top: 20px;
+}
+
+.mar_t25 {
+    margin-top: 25px;
+}
+
+.mar_t30 {
+    margin-top: 30px;
+}
+
+.mar_t35 {
+    margin-top: 35px;
+}
+
+.mar_t40 {
+    margin-top: 40px;
+}
+
+.mar_t45 {
+    margin-top: 45px;
+}
+
+.mar_t50 {
+    margin-top: 50px;
+}
+
+.mar_t55 {
+    margin-top: 55px;
+}
+
+.mar_b1 {
+    margin-bottom: 1px;
+}
+
+.mar_b5 {
+    margin-bottom: 5px;
+}
+
+.mar_b10 {
+    margin-bottom: 10px;
+}
+
+.mar_b15 {
+    margin-bottom: 15px;
+}
+
+.mar_b20 {
+    margin-bottom: 20px;
+}
+
+.mar_b25 {
+    margin-bottom: 25px;
+}
+
+.mar_b30 {
+    margin-bottom: 30px;
+}
+
+.mar_b35 {
+    margin-bottom: 35px;
+}
+
+.mar_b40 {
+    margin-bottom: 40px;
+}
+
+.mar_b45 {
+    margin-bottom: 45px;
+}
+
+.mar_b50 {
+    margin-bottom: 50px;
+}
+
+.mar_b55 {
+    margin-bottom: 55px;
+}
+
+.mar_l1 {
+    margin-left: 1px;
+}
+
+.mar_l5 {
+    margin-left: 5px;
+}
+
+.mar_l10 {
+    margin-left: 10px;
+}
+
+.mar_l15 {
+    margin-left: 15px;
+}
+
+.mar_l20 {
+    margin-left: 20px;
+}
+
+.mar_l25 {
+    margin-left: 25px;
+}
+
+.mar_l30 {
+    margin-left: 30px;
+}
+
+.mar_l35 {
+    margin-left: 35px;
+}
+
+.mar_l40 {
+    margin-left: 40px;
+}
+
+.mar_l50 {
+    margin-left: 50px;
+}
+
+.mar_r1 {
+    margin-right: 1px;
+}
+
+.mar_r5 {
+    margin-right: 5px;
+}
+
+.mar_r10 {
+    margin-right: 10px;
+}
+
+.mar_r15 {
+    margin-right: 15px;
+}
+
+.mar_r20 {
+    margin-right: 20px;
+}
+
+.mar_r25 {
+    margin-right: 25px;
+}
+
+.mar_r30 {
+    margin-right: 30px;
+}
+
+
+/*---------------------------------------segmentation------------------------------------------*/
+
+
+/*padding*/
+
+.pad1 {
+    padding: 1px;
+}
+
+.pad2 {
+    padding: 2px;
+}
+
+.pad3 {
+    padding: 3px;
+}
+
+.pad4 {
+    padding: 4px;
+}
+
+.pad5 {
+    padding: 5px;
+}
+
+.pad_t1 {
+    padding-top: 1px;
+}
+
+.pad_t2 {
+    padding-top: 2px;
+}
+
+.pad_t3 {
+    padding-top: 3px;
+}
+
+.pad_t4 {
+    padding-top: 4px;
+}
+
+.pad_t5 {
+    padding-top: 5px;
+}
+
+.pad_t8 {
+    padding-top: 8px;
+}
+
+.pad_t10 {
+    padding-top: 10px;
+}
+
+.pad_t15 {
+    padding-top: 15px;
+}
+
+.pad_t17 {
+    padding-top: 17px;
+}
+
+.pad_t20 {
+    padding-top: 20px;
+}
+
+.pad_t25 {
+    padding-top: 25px;
+}
+
+.pad_t30 {
+    padding-top: 30px;
+}
+
+.pad_t32 {
+    padding-top: 32px;
+}
+
+.pad_t35 {
+    padding-top: 35px;
+}
+
+.pad_t40 {
+    padding-top: 40px;
+}
+
+.pad_t45 {
+    padding-top: 45px;
+}
+
+.pad_t50 {
+    padding-top: 50px;
+}
+
+.pad_t55 {
+    padding-top: 55px;
+}
+
+.pad_b1 {
+    padding-bottom: 1px;
+}
+
+.pad_b2 {
+    padding-bottom: 2px;
+}
+
+.pad_b3 {
+    padding-bottom: 3px;
+}
+
+.pad_b4 {
+    padding-bottom: 4px;
+}
+
+.pad_b5 {
+    padding-bottom: 5px;
+}
+
+.pad_b8 {
+    padding-bottom: 8px;
+}
+
+.pad_b10 {
+    padding-bottom: 10px;
+}
+
+.pad_b15 {
+    padding-bottom: 15px;
+}
+
+.pad_b20 {
+    padding-bottom: 20px;
+}
+
+.pad_b25 {
+    padding-bottom: 25px;
+}
+
+.pad_b30 {
+    padding-bottom: 30px;
+}
+
+.pad_b35 {
+    padding-bottom: 35px;
+}
+
+.pad_b40 {
+    padding-bottom: 40px;
+}
+
+.pad_b45 {
+    padding-bottom: 45px;
+}
+
+.pad_b50 {
+    padding-bottom: 50px;
+}
+
+.pad_b55 {
+    padding-bottom: 55px;
+}
+
+.pad_l5 {
+    padding-left: 5px;
+}
+
+.pad_l10 {
+    padding-left: 10px;
+}
+
+.pad_l15 {
+    padding-left: 15px;
+}
+
+.pad_l20 {
+    padding-left: 20px;
+}
+
+.pad_l25 {
+    padding-left: 25px;
+}
+
+.pad_l30 {
+    padding-left: 30px;
+}
+
+.pad_l45 {
+    padding-left: 45px;
+}
+
+.pad_r5 {
+    padding-right: 5px;
+}
+
+.pad_r10 {
+    padding-right: 10px;
+}
+
+.pad_r15 {
+    padding-right: 15px;
+}
+
+.pad_r20 {
+    padding-right: 20px;
+}
+
+.pad_r25 {
+    padding-right: 25px;
+}
+
+.pad_r30 {
+    padding-right: 30px;
+}
+
+.w_600 {
+    width: 600px;
+}
+
+.mar_center {
+    margin: 0px auto;
+}
+
+ul,
+li,
+ol,
+dl,
+dt,
+dd {
+    list-style: none;
+    padding: 0px;
+}
+
+body {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    line-height: 22px;
+    color: #333;
+}
+
+
+/*link-color add by lqy 2016-6-4 09:38:43 修复概览检索关键字不能标红的问题*/
+
+a:link,
+a:visited,
+a:active {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #6c6b6b;
+}
+
+
+/*第1题样式*/
+
+.info_cont ul li {
+    padding-left: 12px;
+    line-height: 32px;
+    border-bottom: 1px dashed #e7e7e7;
+}
+
+.bg_yellow {
+    background-color: #Ff0!important;
+}
+
+
+/*第6题样式*/
+
+.infor_column {
+    width: 394px;
+    margin: 0px auto;
+}
+
+.infor_tit {
+    height: 35px;
+}
+
+.infor_tit ul li {
+    float: left;
+    line-height: 35px;
+    width: 128px;
+    text-align: center;
+}
+
+.mar_l5 {
+    margin-left: 5px;
+}
+
+.infor_tit ul li a {
+    display: block;
+    width: 128px;
+    height: 35px;
+    line-height: 35px;
+    background: url('2015_swb_infor_a.jpg') repeat-x left top;
+    -moz-border-radius: 6px 6px 0px 0px;
+    -webkit-border-radius: 6px 6px 0px 0px;
+    border-radius: 6px 6px 0px 0px;
+    position: relative;
+    behavior: url('images/PIE.htc');
+}
+
+.infor_tit ul li a.infor_curr,
+.infor_tit ul li a:hover {
+    background: #2886e1;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.infor_cont {
+    height: 211px;
+    padding: 4px 16px;
+}
+
+.infor_cont ul li {
+    padding-left: 12px;
+    background: url('2015_swb_or_dot.jpg') no-repeat left center;
+    line-height: 32px;
+    border-bottom: 1px dashed #e7e7e7;
+}
+
+.infor_cont ul li span {
+    color: #999;
+    float: right;
+}
+
+.borderone {
+    border: 1px solid #e7e7e7;
+}
+
+
+/*第7题样式*/
+
+.folder {
+    background: url(z-1.jpg) no-repeat;
+    padding-left: 36px;
+    height: 16px;
+    line-height: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.folder2 {
+    background: url(z-2.jpg) no-repeat;
+    padding-left: 36px;
+    height: 16px;
+    line-height: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.folder3 {
+    background: url(z-3.jpg) no-repeat;
+    padding-left: 36px;
+    height: 16px;
+    line-height: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.folder4 {
+    background: url(z-4.jpg) no-repeat;
+    padding-left: 36px;
+    height: 16px;
+    line-height: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.folderItem {
+    background: url(z-top.gif) no-repeat;
+    padding-left: 36px;
+    height: 16px;
+    line-height: 16px;
+    margin-left: 20px;
+    margin-bottom: 1px;
+}
+
+.folderItem1 {
+    background: url(z-end.gif) no-repeat;
+    padding-left: 36px;
+    height: 16px;
+    line-height: 16px;
+    margin-left: 20px;
+    margin-bottom: 1px;
+}
+
+
+/*第7题样式*/
+
+.on {
+    background: #f2fcff;
+}
+
+.hide {
+    padding-left: 12px;
+    background: url('2015_swb_or_dot.jpg') no-repeat left center;
+}
+
+
+/*第10题样式*/
+
+.bor {
+    border: #ccc solid 1px;
+    width: 180px;
+    padding: 5px;
+}
+
+.box {
+    width: 170px;
+    height: 25px;
+    line-height: 25px;
+    text-align: right;
+}
+
+.btn {
+    width: 40px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>幻灯片制作</title>
+    <style>
+        #pic {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>要求：每两秒切换一张图片，鼠标悬浮时需要停止切换</p>
+    <p>提示：setInterval()/clearInterval()</p>
+    <div id="pic" onmouseout="fn1()" onmouseleave="fn2()">
+        <img id="imgs" src="images/ad-01.jpg" />
+        <p id="sd"></p>
+        <!-- <img id="imgs" src="images/ad-02.jpg" style="display:none;" />
+        <img id="imgs" src="images/ad-03.jpg" style="display:none;" />
+        <img id="imgs" src="images/ad-04.jpg" style="display:none;" /> -->
+    </div>
+</body>
+<script type="text/javascript">
+    var img = ["images/ad-01.jpg", "images/ad-02.jpg", "images/ad-03.jpg", "images/ad-04.jpg"];
+    var nums = 0;
+    var a = document.getElementById("imgs");
+    var mytime = setInterval("change()", 2000);
+
+    function change() {
+        nums++
+        if (nums === 4) {
+            nums = 0;
+        };
+        a.src = img[nums];
+    };
+
+    function fn1() {
+        clearInterval(mytime); //停止计时器的ID
+    };
+
+    function fn2() { //鼠标离开后开启定时器
+        mytime = setInterval("change", 2000);
+    };
+</script>
+
+
+</html>

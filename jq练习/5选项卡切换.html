@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>选项卡切换</title>
+    <link href="./images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="w_600 mar_center">
+        <p class="pad_t20 pad_b20"><strong>要求：</strong>编写一段JavaScript代码，实现选项卡的切换功能，鼠标悬浮于某一个选项卡时对应标签下的内容需要显示！</p>
+
+    </div>
+    <div class="w_600 mar_center">
+        <div class="infor_column" avalonctrl="tabFgwj" id="slideTxtBox">
+            <div class="infor_tit">
+                <ul>
+                    <li><a href="#" class="mar_l5" id="l1">通知公告</a></li>
+                    <li class="mar_l5" id="l2"><a href="#">法规文件</a></li>
+                </ul>
+            </div>
+            <div class="infor_cont borderone" id="div1">
+                <div id="d1">
+                    <ul>
+                        <li><span>12-16</span><a href="#">1领事认证添规章 文书往来更规范（领事服...</a></li>
+                        <li><span>11-18</span><a href="#">1发挥优势，全力推进21世纪海上丝绸之路...</a></li>
+                        <li><span>11-18</span><a href="#">1海上丝绸之路核心区福建大行动</a></li>
+                        <li><span>09-06</span><a href="#">1福建省人民政府外事办公室转发省政府办...</a></li>
+                        <li><span>12-28</span><a href="#">1开放倒逼改革提速</a></li>
+                        <li><span>09-19</span><a href="#">1商务部对外投资和经济合作司负责人就发...</a></li>
+                    </ul>
+                </div>
+                <div id="d2" style="display: none;">
+                    <ul>
+                        <li><span>12-16</span><a href="#">2领事认证添规章 文书往来更规范（领事服...</a></li>
+                        <li><span>11-18</span><a href="#">2发挥优势，全力推进21世纪海上丝绸之路...</a></li>
+                        <li><span>11-18</span><a href="#">2海上丝绸之路核心区福建大行动</a></li>
+                        <li><span>09-06</span><a href="#">2福建省人民政府外事办公室转发省政府办...</a></li>
+                        <li><span>12-28</span><a href="#">2开放倒逼改革提速</a></li>
+                        <li><span>09-19</span><a href="#">2商务部对外投资和经济合作司负责人就发...</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script language="javascript" src="./images/jquery-1.8.3.min.js"></script>
+    <script src="./js/jquery.SuperSlide.2.1.3.source.js"></script>
+    <script>
+        // jQuery("#slideTxtBox").slide({});
+        $().ready(function() {
+            $(".infor_tit li").mouseenter(function() {
+                var _index = $(this).index(); //通过 .index()方法获取元素下标，从0开始，赋值给某个变量
+                $("#div1>div").eq(_index).show().siblings().hide(); //让内容框的第 _index 个显示出来，其他的被隐藏
+                $(this).eq(_index).addClass("infor_curr").siblings().removeClass("infor_curr"); //改变选中时候的选项框的样式，移除其他几个选项的样式
+            });
+        });
+    </script>
+</body>
+
+</html>

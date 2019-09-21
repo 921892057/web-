@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>异步调用</title>
+</head>
+
+<body>
+    <div>接口链接：http://hyyyj.fujian.gov.cn/was5/web/search?channelid=229105&sortfield=-docreltime&classsql=chnlid%3D20375&prepage=10&page=2
+    </div>
+    <div>题目：把上述接口链接用异步调用将对应字段循环填入到下面表格中。</div>
+    <div style="width:1000px; margin-top:20px;">
+        <table width="100%" border="1" id="bt">
+            <tr>
+                <th width="30%">标题</th>
+                <th width="15%">所属栏目</th>
+                <th width="15%">时间</th>
+                <th width="40%">内容</th>
+            </tr>
+            <tr>
+                <td height="40px"><a href="#">测试标题</a></td>
+                <td>图片新闻</td>
+                <td>2016-8-19</td>
+                <td>12月29日至30日，第四批省派驻村干部业务培训班在莆田市举办...</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    myurl = "http://hyyyj.fujian.gov.cn/was5/web/search?channelid=229105&sortfield=-docreltime&classsql=chnlid%3D20375&prepage=10&page=2"
+    $.ajax({
+        url: 'http://www.fujian.gov.cn/szfwj?callback=pushInfoJsonpCallBackfj&_=1535599409760',
+
+        type: "post",
+        dataType: "jsonp",
+        jsonpCallback: "pushInfoJsonpCallBackfj",
+        async: true,
+        success: function(msg) {
+            var a = $("#bt");
+            var table1;
+            for (var i = 0; i < 10; i++) {
+                table1 += ("<tr><td>" + msg.docs[i].title + "</td>" + "<td></td>" + "<td>" + msg.docs[i].time + "</td>" + "<td>" + msg.docs[i].url + "</td>" + "</tr>")
+            }
+            a.append(table1);
+
+
+        },
+
+    })
+</script>
+
+</html>

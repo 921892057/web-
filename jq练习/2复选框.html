@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="./images/style.css" rel="stylesheet" type="text/css">
+    <title>复选框选中的问题</title>
+</head>
+
+<body>
+    <div class="w_600 mar_center">
+        <p class=" pad_t20 pad_b20"><strong>要求：</strong>定义五个复选框，分别为2016-2012年，定义三个按钮（全选、不选、反选），点击复选框或者点击按钮时需要将选中的复选框的值输出到页面上（选择多个需要输出多个）。</p>
+
+    </div>
+    <div class="w_600 mar_center">
+        <input type="button" id="All" value="全选" />
+        <input type="button" id="uncheck" value="不选" />
+        <input type="button" id="othercheck" value="反选" />
+        <input type="button" id="look" value="查看选中" />
+        <div class="mar_t25">
+            <label><input id="box" type="checkbox" name="box" value="2016年" />2016年<br /></label>
+            <label><input id="box" type="checkbox" name="box" value="2015年" />2015年<br /></label>
+            <label><input id="box" type="checkbox" name="box" value="2014年" />2014年<br /></label>
+            <label><input id="box" type="checkbox" name="box" value="2013年" />2013年<br /></label>
+            <label><input id="box" type="checkbox" name="box" value="2012年" />2012年<br /></label>
+        </div>
+    </div>
+</body>
+
+<script language="javascript" src="./images/jquery-1.8.3.min.js"></script>
+
+<script>
+    $("#All").click(function() {
+        $("input[name='box']").attr("checked", true);
+    });
+    $("#uncheck").click(function() {
+        $("input[name='box']").attr("checked", false);
+    });
+    $("#othercheck").click(function() {
+        $("input[name='box']").each(function() {
+            $(this).attr("checked", !$(this).attr("checked"));
+        });
+    });
+    $("#look").click(function() {
+        text = $("input:checkbox[name='box']:checked").map(function(index, elem) {
+            return $(elem).val();
+        }).get().join(',');
+        alert("选中的年份为：" + text);
+    });
+</script>
+
+</html>

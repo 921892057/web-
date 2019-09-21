@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="./images/style.css" rel="stylesheet" type="text/css">
+    <title>定位器以及属性操作</title>
+</head>
+
+<body>
+    <div class="w_600 mar_center">
+        <p class=" pad_t20 pad_b20"><strong>要求：</strong>1.使用jquery的选择器，分别获取ul中的第一个、第二个、倒数第二个、最后一个、第3个和第4个li标签、以及最后3个li标签的内容，然后输出（方式不限，可使用弹窗或者在页面上输出）</p>
+
+    </div>
+    <div class="w_600 mar_center">
+        <div id="div1">
+            <input id="an1" type="button" value="第一个" />
+            <input id="an2" type="button" value="第二个" />
+            <input id="an3" type="button" value="倒数第二个" />
+            <input id="an4" type="button" value="最后一个" />
+            <input id="an5" type="button" value="第3个和第4个" />
+            <input id="an6" type="button" value="最后3个" />
+        </div>
+        <div class="info_cont" id="div1">
+            <ul id="ul1">
+                <li id="sj1" class="bg1">bg1</li>
+                <li id="sj2" class="bg2">bg2</li>
+                <li id="sj3" class="bg3">bg3</li>
+                <li id="sj4" class="bg4">bg4</li>
+                <li id="sj5" class="bg5">bg5</li>
+                <li id="sj6" class="bg6">bg6</li>
+            </ul>
+        </div>
+    </div>
+    <div class="w_600 mar_center">
+        <p class=" pad_t20 pad_b20"><strong>要求：</strong>2.使用jquery的选择器，对所有的偶数的添加.bg_yellow</p>
+
+    </div>
+    <div class="w_600 mar_center mar_t30">
+        <div>
+            <input type="button" value="添加样式" id="input1">
+        </div>
+        <div class="info_cont" id="cla1">
+            <ul id="ul2">
+                <li class="bg1">bg1</li>
+                <li class="bg2">bg2</li>
+                <li class="bg3">bg3</li>
+                <li class="bg4">bg4</li>
+                <li class="bg5">bg5</li>
+                <li class="bg6">bg6</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+<script language="javascript" src="./images/jquery-1.8.3.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $("#div1 input").first().click(function() {
+            alert($("#ul1 li").first().text());
+        });
+        $("#div1 input").eq(1).click(function() {
+            alert($("#ul1 li").eq(1).text());
+        });
+        $("#div1 input").eq(2).click(function() {
+            alert($("#ul1 li").eq(-2).text());
+        });
+        $("#div1 input").eq(3).click(function() {
+            alert($("#ul1 li").last().text());
+        });
+        $("#div1 input").eq(4).click(function() {
+            alert($("#ul1 li").eq(2).text() + "和" + $("#ul1 li").eq(3).text());
+        });
+        $("#div1 input").eq(5).click(function() {
+            alert($("#ul1 li").eq(-3, ).text() + $("#ul1 li").eq(-2).text() + $("#ul1 li").eq(-1).text());
+        });
+        $("#input1").click(function() {
+            $("#ul2 li:even").addClass("bg_yellow")
+        })
+    })
+</script>
+
+</html>

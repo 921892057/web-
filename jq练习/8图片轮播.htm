@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>选项卡切换</title>
+    <link href="./images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="a" class="w_600 mar_center">
+        <p class="pad_t20"><strong>要求：</strong>根据提供的四张图片实现图片轮播。每两秒切换一张图片，鼠标悬浮时需要停止切换</p>
+        <p class="pad_b20"><strong>提示：</strong>setInterval()/clearInterval()</p>
+    </div>
+    <div id="div1" class="w_600 mar_center">
+        <div id="pic">
+            <img id="imgs" src="images/ad-01.jpg" />
+            <!-- <img style="display: none" src="images/ad-02.jpg" />
+            <img style="display: none" src="images/ad-03.jpg" />
+			<img style="display: none" src="images/ad-04.jpg" /> -->
+            <p id="i" class="pad_t20"></p>
+        </div>
+    </div>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/jquery.SuperSlide.2.1.3.source.js"></script>
+    <script>
+        // jQuery("#div1").slide({
+        //     mainCell: "#pic ",
+        //     autoPlay: true,
+        //     delayTime: 20000
+        // });
+        var img = ["images/ad-01.jpg", "images/ad-02.jpg", "images/ad-03.jpg", "images/ad-04.jpg"];
+        var nums = 0;
+        var a = document.getElementById("imgs");
+        var mytime = setInterval("change()", 5000);
+
+        function change() {
+            nums++
+            if (nums === 4) {
+                nums = 0;
+            };
+            a.src = img[nums];
+        };
+
+        $("#imgs").hover(function() {
+            clearInterval(mytime);
+
+        }, function() {
+            mytime = setInterval("change()", 5000);
+
+        });
+    </script>
+
+</body>
+
+</html>

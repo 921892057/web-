@@ -1,0 +1,13 @@
+﻿body { font-size:13px;}
+.txt { border:solid #ccc 1px; padding:3px 5px;}
+
+.onInfoShow{ line-height:22px; color:#999;} 
+.onInfoFocus{ line-height:22px; color:#333; 
+			  background-image:url(../images/onFocus.gif);
+			  background-repeat:no-repeat; padding-left:26px; }
+.onInfoCorrect{ line-height:22px; color:#333; 
+			  background-image:url(../images/onCorrect.gif);
+			  background-repeat:no-repeat; padding-left:26px; }
+.onInfoError{ line-height:22px; color:#333; 
+			  background-image:url(../images/onError.gif);
+			  background-repeat:no-repeat; padding-left:26px; }

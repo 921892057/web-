@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>简易计算器</title>
+    <link href="./images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+</head>
+
+<body>
+    <div class="w_600 mar_center">
+        <p class="pad_t20"><strong>要求：</strong><br /> 1、必要的提示信息（如：除数不能为空）
+            <br /> 2、校验功能
+            <br /> 3、输出计算表达式（每按一个按钮需要在box中输出信息）
+        </p>
+    </div>
+    <div class="w_600 mar_center">
+
+        <div class="bor">
+            <table>
+                <tr>
+                    <td colspan="4"><input type="text" class="box" id="box" value="" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn" value="7" /></td>
+                    <td><input type="button" class="btn" value="8" /></td>
+                    <td><input type="button" class="btn" value="9" /></td>
+                    <td><input type="button" class="btn" value="÷" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn" value="4" /></td>
+                    <td><input type="button" class="btn" value="5" /></td>
+                    <td><input type="button" class="btn" value="6" /></td>
+                    <td><input type="button" class="btn" value="x" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn" value="1" /></td>
+                    <td><input type="button" class="btn" value="2" /></td>
+                    <td><input type="button" class="btn" value="3" /></td>
+                    <td><input type="button" class="btn" value="-" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn" value="0" /></td>
+                    <td><input type="button" class="btn" value="." /></td>
+                    <td><input type="button" class="btn" value="=" /></td>
+                    <td><input type="button" class="btn" value="+" /></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="./images/jquery-1.8.3.min.js"></script>
+    <script>
+        var sz = "";
+        $("input").click(function() {
+            var s = $(this).val();
+            sz = sz + s;
+            // console.log(sz);
+            var sr = $("#box").val(sz);
+            // console.log($("#box").val());
+            if ((s == "+") || (s == "-") || (s == "x") || (s == "÷") || (s == ".")) {
+                var f = sz;
+                count = f.length;
+                qian = Number(f.substring(0, f.length - 1)); //前半部分
+                zhong = f.substring(f.length - 1, f.length);
+                console.log("前:" + qian); //测试运算符前的数字显示
+                console.log("中:" + zhong); //测试运算符是否正常显示
+            }
+            if (s == "=") {
+                var j = sz;
+                hou = Number(j.substring(count, j.length - 1));
+                if (zhong == "÷" && hou == 0) {
+                    alert("除数不能为0")
+                }
+                if (zhong == "÷" && hou == null) {
+                    alert("除数不能为空")
+                }
+                console.log("后:" + hou); //测试运算符后面的代码
+                switch (zhong) {
+                    case "+":
+                        result = qian + hou;
+                        break;
+                    case "-":
+                        result = qian - hou;
+                        break;
+                    case "x":
+                        result = qian * hou;
+                        break;
+                    case "÷":
+                        result = String(qian / hou).substring(0, 10);
+                        break;
+                }
+                jg = sz + result;
+                $("#box").val(jg);
+            }
+
+
+        });
+    </script>
+</body>
+
+</html>
